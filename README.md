@@ -4,10 +4,10 @@ This repository provides ROS 2--based onboard control and
 coverage-planning functionality for PX4 platforms (UGV/RC car or UAV).\
 It includes:
 
--   Keyboard teleoperation\
--   Modular ROS 2 control nodes\
--   Obstacle processing and global coverage planning\
--   PX4 microRTPS communication support\
+-   Keyboard teleoperation
+-   Modular ROS 2 control nodes
+-   Obstacle processing and global coverage planning
+-   PX4 microRTPS communication support
 -   Custom QoS profiles for real-time control
 
 ------------------------------------------------------------------------
@@ -42,10 +42,8 @@ and ROS 2 distribution.
 
 1.  Clone the official PX4 ROS 2 interface library:
 
-    ```
     cd ~/ros2_ws/src
     git clone https://github.com/Auterion/px4-ros2-interface-lib.git
-    ```
     
 
 2.  Replace the example manual node inside their repo with this
@@ -53,11 +51,10 @@ and ROS 2 distribution.
 
 3.  Build:
 
-    ```
     cd ~/ros2_ws
-        colcon build
-        source install/setup.bash
-    ```
+    colcon build
+    source install/setup.bash
+
     
 
 ------------------------------------------------------------------------
@@ -65,24 +62,24 @@ and ROS 2 distribution.
 ## **2. Run the System**
 
 ### **2.1 Source environment**
-    ```
+
     source install/setup.bash
-    ```
+
 
 ### **2.2 Start the Micro XRCE-DDS Agent**
 
 Install: https://github.com/eProsima/Micro-XRCE-DDS-Agent
 
 Run:
-    ```
+
     ./start_node.sh
-    ```
+
 ### **2.3 Switch to manual mode and arm**
 
 ### **2.4 Run keyboard teleoperation**
-    ```
+
     python qos_keyboard_ctl.py
-    ```
+
 ------------------------------------------------------------------------
 
 # 🗺️ Planning Module Usage
@@ -125,17 +122,17 @@ Supports:
 
 This repository enables:
 
--   PX4 onboard control\
--   Real‑time teleoperation\
--   LiDAR-based mapping\
+-   PX4 onboard control
+-   Real‑time teleoperation
+-   LiDAR-based mapping
 -   Global B\* coverage planning using `/odom`
 
 Before building:
 
-1.  Compile `px4_msgs`\
-2.  Add `px4_ros2_interface_lib`\
-3.  Build with `colcon`\
-4.  Ensure `/livox/livox_lidar` + `/odom` are available\
+1.  Compile `px4_msgs`
+2.  Add `px4_ros2_interface_lib`
+3.  Build with `colcon`
+4.  Ensure `/livox/livox_lidar` + `/odom` are available
 5.  Run mapping and planning nodes
 
 ------------------------------------------------------------------------
